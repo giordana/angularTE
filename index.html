@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>
+      te.thoughtworks.com - Index
+    </title>
+   <script src="http://code.angularjs.org/0.9.19/angular-0.9.19.min.js" ng:autobind></script>    
+  </head>
+<script>
+
+ function MyController() {
+         var scope = this;
+         scope.timesheets = {
+             weeks : [ 
+                 {
+		    weekEnding: "29-Jan-2012",
+		    lastModified: "30-Jan-2012 @ 12:07:29",
+		    billableHours: "0.00",
+		    nonBillableHours: "40.00",
+		    totalHours: "40.00",
+		    status: "submitted",
+		    submittedDate: "30-Jan-2012 @ 12:07:29"
+		}, 
+		{
+		    weekEnding: "22-Jan-2012",
+		    lastModified: "24-Jan-2012 @ 10:10:24",
+		    billableHours: "0.00",
+		    nonBillableHours: "40.00",
+		    totalHours: "40.00",
+		    status: "submitted",
+		    submittedDate: "24-Jan-2012 @ 10:10:24"
+		}, 
+		{
+		    weekEnding: "15-Jan-2012",
+		    lastModified: "11-Jan-2012 @ 19:51:28",
+		    billableHours: "0.00",
+		    nonBillableHours: "40.00",
+		    totalHours: "40.00",
+		    status: "submitted",
+		    submittedDate: "11-Jan-2012 @ 19:51:28"
+		}, 
+		{
+		    weekEnding: "08-Jan-2012",
+		    lastModified: "08-Jan-2012 @ 20:36:18",
+		    billableHours: "0.00",
+		    nonBillableHours: "41.00",
+		    totalHours: "41.00",
+		    status: "submitted",
+		    submittedDate: "08-Jan-2012 @ 20:36:18"
+		},
+		{
+		    weekEnding: "01-Jan-2012",
+		    lastModified: "28-Dec-2011 @ 21:07:16",
+		    billableHours: "16.00",
+		    nonBillableHours: "27.00",
+		    totalHours: "43.00",
+		    status: "submitted",
+		    submittedDate: "28-Dec-2011 @ 21:07:16"
+		}
+		]
+		};
+		}
+</script>
+
+
+
+
+
+  <body id="timesheets" ng:controller="MyController">
+    <div id="doc3">
+      <div id="header">
+        <div id="login_status">
+	        	        <div class="login">Logged in as: USER | <a href="/logout">Logout</a> </div>
+
+	        
+        </div>
+        <div id="title">
+        
+        </div>
+      </div>
+      <div id="bd">
+        <div id="rows">
+          <div id="nav">
+            
+            <a href="/">Home</a>
+            <a href="/time_sheets">Time</a>   
+            <a href="/expense_reports">Expenses</a>
+            <a href="/summary">Reports</a>
+            <a href="/unsubmitted">Unsubmitted</a>
+            <a href="/preferences">Preferences</a>
+            <a href="/questions">Help/FAQ</a>
+          </div>
+          <div id="main">
+  	    <div id="flash">
+  	      
+	    </div>
+	    <div id="content">
+	      
+<h1>Process a Time Report for USER NAME</h1>
+
+<a href="/time_sheets/new">Add a new time report</a>
+<br/><br/>
+<table id='navigate' width='96%' class="prevNext">
+  <tr>
+    
+  </tr>
+</table>
+<br/>
+
+<table id='time' width='100%'>
+  <tr>
+    <th align='left'>Week ending date</th>
+    <th align='left'>Last modified</th>
+    <th align='right'>Billable hours</th>
+
+    <th align='right'>Non-billable hours</th>
+    <th align='right'>Total hours</th>
+    <th align='left'>Status</th>
+    <th align='left'>Submitted date</th>
+    <th align='left'>Actions</th>
+  </tr>
+
+  <tbody id="line_weeks">
+    <tr ng:repeat="week in timesheets.weeks" class='even'>
+      <td>{{week.weekEnding}}</td>
+      <td>{{week.lastModified}}</td>
+      <td align='right'>{{week.billableHours}}</td>
+      <td align='right'>{{week.nonBillableHours}}</td>
+      <td align='right'>{{week.totalHours}}</td>
+
+      <td>{{week.status}}</td>
+      <td>{{week.submittedDate}}</td>
+      <td>
+        <a href="/time_sheets/439994">View</a>
+        <a href="/time_sheets/clone_selected/439994">Clone</a>
+        <span></span>
+        <span></span>
+
+      </td>
+    </tr>
+  
+    </tr>
+  </tbody>
+</table>
+
+	    </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+
+      <div id="footer">
+        Gio Version 
+        </div>
+    </div>    
+  </body>
+</html>
+
